@@ -18,18 +18,18 @@
       <b>Abstract:</b> Neural audio codecs, such as SoundStream and EnCodec, leverage deep neural networks to convert raw audio into latent vectors, which are then quantized and reconstructed using sophisticated architectures. The advent of self-supervised learning has further enhanced these codecs, enabling high-quality, long-duration audio generation and zero-shot text-to-speech (TTS) applications. Despite these improvements, challenges persist, particularly regarding information loss and the distribution of latent vectors. This paper explores how altering the shape of latent vectors can benefit both neural audio codecs and TTS models. By integrating additional loss functions to better structure the latent space through techniques like debiasing and threshold setting, we demonstrate improved reconstruction accuracy in neural audio codecs and enhanced intelligibility, speaker similarity, and naturalness in zero-shot TTS. Our findings underscore the importance of optimizing latent vector shape and suggest that these adjustments can significantly enhance model performance. Future work will involve validating these loss functions across various speech-based self-supervised models to evaluate their broader applicability and impact.
     </div>
     <div>
-      <h3>EnCodec Reconstruction (trained with LibriSpeech)</h3>
+      <h3>EnCodec Reconstruction (trained with LibriSpeech 960h)</h3>
       <p>Sample 1.</p>
       <table>
         <tbody>
           <tr>
             <th>GT</th>
             <th>Baseline (16.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(16.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (16.0 kbps)</th>
             <th>Baseline (8.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(8.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (8.0 kbps)</th>
             <th>Baseline (4.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(4.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (4.0 kbps)</th>
           </tr>
           <tr>
             <td><audio controls preload="none"><source src="wavs/codec_samples/5442-41168-0007_rescaled.wav"></audio></td>
@@ -48,11 +48,11 @@
           <tr>
             <th>GT</th>
             <th>Baseline (16.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(16.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (16.0 kbps)</th>
             <th>Baseline (8.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(8.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (8.0 kbps)</th>
             <th>Baseline (4.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(4.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (4.0 kbps)</th>
           </tr>
           <tr>
             <td><audio controls preload="none"><source src="wavs/codec_samples/3570-5694-0010_rescaled.wav"></audio></td>
@@ -71,11 +71,11 @@
           <tr>
             <th>GT</th>
             <th>Baseline (16.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(16.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (16.0 kbps)</th>
             <th>Baseline (8.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(8.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (8.0 kbps)</th>
             <th>Baseline (4.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(4.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (4.0 kbps)</th>
           </tr>
           <tr>
             <td><audio controls preload="none"><source src="wavs/codec_samples/7975-280076-0024_rescaled.wav"></audio></td>
@@ -94,11 +94,11 @@
           <tr>
             <th>GT</th>
             <th>Baseline (16.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(16.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (16.0 kbps)</th>
             <th>Baseline (8.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(8.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (8.0 kbps)</th>
             <th>Baseline (4.0 kbps)</th>
-            <th>Debiasing+Threshold(value=5)\n(4.0 kbps)</th>
+            <th>Debiasing+Threshold(value=5) (4.0 kbps)</th>
           </tr>
           <tr>
             <td><audio controls preload="none"><source src="wavs/codec_samples/1995-1826-0021_rescaled.wav"></audio></td>
@@ -113,8 +113,8 @@
       </table>
     </div>
     <div>
-      <h3>Text-to-Speech</h3>
-      <p>There was something in his carriage which resembled the buoyant movements of an immortal and he did not dance so much as seem to soar along.</p>
+      <h3>Text-to-Speech (trained with LibriSpeech 960h)</h3>
+      <p>1. There was something in his carriage which resembled the buoyant movements of an immortal and he did not dance so much as seem to soar along.</p>
       <table>
         <tbody>
           <tr>
@@ -133,7 +133,7 @@
           </tr>
         </tbody>
       </table>
-      <p>My remark pleases him but i soon prove to him that it is not the right way to speak however perfect may have been the language of that ancient writer.</p>
+      <p>2. My remark pleases him but i soon prove to him that it is not the right way to speak however perfect may have been the language of that ancient writer.</p>
       <table>
         <tbody>
           <tr>
@@ -152,7 +152,7 @@
           </tr>
         </tbody>
       </table>
-      <p>He worked me very hard he wanted to be beating me all the time.</p>
+      <p>3. He worked me very hard he wanted to be beating me all the time.</p>
       <table>
         <tbody>
           <tr>
@@ -171,7 +171,7 @@
           </tr>
         </tbody>
       </table>
-      <p>The examination however resulted in no discovery.</p>
+      <p>4. The examination however resulted in no discovery.</p>
       <table>
         <tbody>
           <tr>
@@ -190,7 +190,7 @@
           </tr>
         </tbody>
       </table>
-      <p>That is very important said holmes.</p>
+      <p>5. That is very important said holmes.</p>
       <table>
         <tbody>
           <tr>
