@@ -18,7 +18,7 @@
       <b>Abstract:</b> Neural audio codecs, such as SoundStream and EnCodec, leverage deep neural networks to convert raw audio into latent vectors, which are then quantized and reconstructed using sophisticated architectures. The advent of self-supervised learning has further enhanced these codecs, enabling high-quality, long-duration audio generation and zero-shot text-to-speech (TTS) applications. Despite these improvements, challenges persist, particularly regarding information loss and the distribution of latent vectors. This paper explores how altering the shape of latent vectors can benefit both neural audio codecs and TTS models. By integrating additional loss functions to better structure the latent space through techniques like debiasing and threshold setting, we demonstrate improved reconstruction accuracy in neural audio codecs and enhanced intelligibility, speaker similarity, and naturalness in zero-shot TTS. Our findings underscore the importance of optimizing latent vector shape and suggest that these adjustments can significantly enhance model performance. Future work will involve validating these loss functions across various speech-based self-supervised models to evaluate their broader applicability and impact.
     </div>
     <div>
-      <h3>EnCodec Reconstruction (16kHz, trained with LibriSpeech 960h)</h3>
+      <h3>1. EnCodec Reconstruction (16kHz, trained with LibriSpeech 960h)</h3>
       <p>Sample 1.</p>
       <table>
         <tbody>
@@ -136,7 +136,7 @@
       </table>
     </div>
     <div>
-      <h3>EnCodec Reconstruction (24kHz, trained with universal audio files)</h3>
+      <h3>2. EnCodec Reconstruction (24kHz, trained with universal audio files)</h3>
       <p>Sample 1.</p>
       <table>
         <tbody>
@@ -254,7 +254,7 @@
       </table>
     </div>
     <div>
-      <h3>Zero-shot Text-to-Speech (16kHz, trained with LibriSpeech 960h)</h3>
+      <h3>3. Zero-shot Text-to-Speech (16kHz, trained with LibriSpeech 960h)</h3>
       <p>There was something in his carriage which resembled the buoyant movements of an immortal and he did not dance so much as seem to soar along.</p>
       <table>
         <tbody>
